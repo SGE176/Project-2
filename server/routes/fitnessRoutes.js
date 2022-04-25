@@ -6,6 +6,7 @@ const fitnessController = require('../controllers/storyController');
  * App Routes 
 */
 router.get('/', fitnessController.homepage);
+router.get('/categories', fitnessController.exploreCategories);
 
 
 
