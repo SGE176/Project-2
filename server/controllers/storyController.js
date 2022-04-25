@@ -11,13 +11,7 @@ exports.homepage = async(req, res) => {
   try {
     const limitNumber = 5;
     const categories = await Category.find({}).limit(limitNumber);
-    // const latest = await Recipe.find({}).sort({_id: -1}).limit(limitNumber);
-    // const thai = await Recipe.find({ 'category': 'Thai' }).limit(limitNumber);
-    // const american = await Recipe.find({ 'category': 'American' }).limit(limitNumber);
-    // const chinese = await Recipe.find({ 'category': 'Chinese' }).limit(limitNumber);
-
-    // const food = { latest, thai, american, chinese };
-
+  
     res.render('index', { title: 'Fitness Today - Home', categories } );
   } catch (error) {
     res.status(500).send({message: error.message || "Error Occured" });
@@ -39,3 +33,11 @@ exports.exploreCategories = async(req, res) => {
   }
 } 
 
+/**
+ * GET /submit-story
+ * Submit Story
+*/
+exports.submitStory = async(req, res) => {
+ 
+  res.render('submit-story', { title: 'Fitness Today - Submit Story' } );
+}

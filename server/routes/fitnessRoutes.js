@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const fitnessController = require('../controllers/storyController');
+const storyController = require('../controllers/storyController');
 
 /**
  * App Routes 
 */
-router.get('/', fitnessController.homepage);
-router.get('/categories', fitnessController.exploreCategories);
-
+router.get('/', storyController.homepage);
+router.get('/categories', storyController.exploreCategories);
+router.get('/submitstory', storyController.submitStory);
+// router.post('/submit-story', storyController.submitStoryOnPost);
 
 
 module.exports = router;
