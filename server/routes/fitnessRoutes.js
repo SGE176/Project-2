@@ -17,8 +17,8 @@ router.get('/submit-story', storyController.submitStory);
 // Login Page
 router.get('/login',  (req, res) => res.render('login'));
 
-// Register Page
-router.get('/register',  (req, res) => res.render('/views/register'));
+// Registeration Page
+router.get('/registeration',  (req, res) => res.render('/views/registeration'));
 
 //Membership
 router.get('/explore-membership', storyController.exploreMembership);
@@ -28,5 +28,12 @@ router.get('/check-galleries', storyController.checkGalleries);
 
 //Features
 router.get('/features', storyController.features);
+
+
+
+//Registration
+
+// router.get('/registration', storyController.registration);
+
 
 module.exports = router;
