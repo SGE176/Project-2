@@ -2,6 +2,8 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const fileUpload = require('express-fileupload');
 const session = require('express-session');
+const mongoose = require('mongoose');
+const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 
@@ -13,6 +15,7 @@ require('dotenv').config();
 app.use(express.urlencoded( { extended: true } ));
 app.use(express.static('public'));
 app.use(expressLayouts);
+
 
 app.use(cookieParser('FitnessSecure'));
 app.use(session({

@@ -38,6 +38,45 @@ exports.exploreCategories = async(req, res) => {
  * Submit Story
 */
 exports.submitStory = async(req, res) => {
- 
-  res.render('submit-story', { title: 'Fitness Today - Submit Story' } );
+ try {
+    res.render('submit-story', { title: 'Fitness Today - Submit Story'} );
+  } catch (error) {
+    res.satus(500).send({message: error.message || "Error Occured" });
+  }
 }
+
+/**
+ * GET /explore-latest
+ * Explplore Latest 
+*/
+exports.exploreMembership = async(req, res) => {
+  try {
+    res.render('explore-membership', { title: 'Fitness Today - Explore Membership'} );
+  } catch (error) {
+    res.satus(500).send({message: error.message || "Error Occured" });
+  }
+} 
+
+/**
+ * GET /check-galleries
+ * Check Galleries
+*/
+exports.checkGalleries = async(req, res) => {
+  try {
+    res.render('check-galleries', { title: 'Fitness Today - Check Galleries'} );
+  } catch (error) {
+    res.satus(500).send({message: error.message || "Error Occured" });
+  }
+} 
+
+/**
+ * GET /features
+ * Features
+*/
+exports.features = async(req, res) => {
+  try {
+    res.render('features', { title: 'Fitness Today - Features'} );
+  } catch (error) {
+    res.satus(500).send({message: error.message || "Error Occured" });
+  }
+} 
