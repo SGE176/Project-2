@@ -80,3 +80,27 @@ exports.features = async(req, res) => {
     res.satus(500).send({message: error.message || "Error Occured" });
   }
 } 
+
+/**
+ * GET /registration
+ * Registration
+*/
+exports.registration = async(req, res) => {
+  try {
+    res.render('registration', { title: 'Fitness Today - Register'} );
+  } catch (error) {
+    res.satus(500).send({message: error.message || "Error Occured" });
+  }
+} 
+
+/**
+ * GET /Login
+ * Login
+*/
+exports.login = async(req, res) => {
+  try {
+    res.render('login', { title: 'Fitness Today - Login'} );
+  } catch (error) {
+    res.satus(500).send({message: error.message || "Error Occured" });
+  }
+} 
